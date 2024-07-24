@@ -1,0 +1,219 @@
+
+body {
+    background-color: #FAFAFA;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px; /* Adjusted to give space for the navbar */
+}
+
+nav {
+    
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    color: white;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+    ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+    }
+
+.navbar-item:nth-last-child(1) {
+    margin-right: 50px;
+}
+
+ul li a:hover {
+    background-color: #969595;
+    border-radius: 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.search {
+    width: 500px;
+    padding: 10px;
+    border-radius: 25px 0 0 25px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-right: none;
+    outline: none;
+    background-color: white;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 0 25px 25px 0;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-left: none;
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+/* لتلوين آخر عمودين */
+td:nth-last-child(2), td:nth-last-child(1) {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+td a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+td:nth-last-child(2):hover, td:nth-last-child(1):hover {
+    background-color: rgb(145, 76, 76);
+}
+
+td a:hover {
+    color: white;
+}
+
+.add {
+    margin: 20px;
+    border-radius: 20px;
+    height: 45px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
+.add a {
+        text-decoration: none;
+        color: white;
+    }
+
+.add a:hover{
+    color:#333;
+}
+
+
+/* add book page
+-----------------------------------------*/
+.add-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    margin-top: 100px;
+    font-family: "Poppins", sans-serif;
+}
+
+.add-sec {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+    border-radius: 10px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .add-sec input {
+        width: 100%;
+        border-radius: 40px;
+        height: 45px;
+        border: 1px solid #333;
+        text-align: center;
+        margin:10px;
+    }
+
+.add-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.add-btn {
+    width: 100%;
+    height: 45px;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+    .add-btn:hover {
+        color: #333;
+    }
+    
+

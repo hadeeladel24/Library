@@ -1,0 +1,117 @@
+﻿@model Book
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addstyle.css">
+</head>
+<body style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+
+    font-family: Poppins, sans-serif;">
+    <div class="edit-container" style="
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+">
+        <div class="edit" style="
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+    border-radius: 10px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ ">
+            <form asp-action="EditBook" asp-controller="Admin" method="post">
+                <h1 style="
+    display: flex;
+    justify-content: center;
+">
+                    Edit Book Information
+                </h1>
+
+                <input asp-for="Book_Id" type="hidden" style="
+    width: 100%;
+    border-radius: 40px;
+    height: 45px;
+    border: 1px solid #333;
+    text-align: center;
+    margin: 5px;
+
+" />
+
+                <input asp-for="Book_Name" value="@Model.Book_Name" placeholder="Book Name" style="
+    width: 100%;
+    border-radius: 40px;
+    height: 45px;
+    border: 1px solid #333;
+    text-align: center;
+    margin: 5px;
+
+" />
+                <input asp-for="Writer" value="@Model.Writer" placeholder="Book Writer" style="
+    width: 100%;
+    border-radius: 40px;
+    height: 45px;
+    border: 1px solid #333;
+    text-align: center;
+    margin: 5px;
+
+" />
+                <input asp-for="price" value="@Model.price" placeholder="Book Price" style="
+    width: 100%;
+    border-radius: 40px;
+    height: 45px;
+    border: 1px solid #333;
+    text-align: center;
+    margin: 5px;
+
+" />
+
+                <button class="btn" type="submit" style="
+    width: 100%;
+    height: 45px;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 20px;
+">
+                    Edit
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+ 

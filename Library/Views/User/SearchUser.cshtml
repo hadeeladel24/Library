@@ -1,0 +1,94 @@
+﻿@model List<Book>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<head>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar" data-navbar>
+        <a href="#" class="logo">BOOK SHOP</a>
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#benefits" class="navbar-link" data-nav-link>Benefits</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#chapters" class="navbar-link" data-nav-link>Books</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="~/User/UserChangepassword" class="navbar-link">ChangePassword</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="~/Home/logout" class="navbar-link">Logout</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+
+
+
+
+    <div class="container">
+        <form class="search-container" asp-action="UserSearch" asp-controller="User" method="get">
+            <input type="text" class="search" name="searchKey" placeholder="Enter Book Name" />
+            <button class="btn">Search</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Writer</th>
+                <th>Price</th>
+                <th> Edit </th>
+                <th> Delete </th>
+            </tr>
+
+
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Book_Id</td>
+                    <td>@book.Book_Name</td>
+                    <td>@book.Writer</td>
+                    <td>@book.price</td>
+                   
+                    <td> <a asp-action="AddFav" asp-controller="User" asp-route-id="@book.Book_Id"> Add To Faviourte</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>
+
