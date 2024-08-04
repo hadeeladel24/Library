@@ -38,6 +38,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Login}/{id?}");
 
-app.MapFallbackToFile("index.html"); // To serve index.html for all routes
+app.MapFallbackToFile("Login.cshtml"); // To serve index.html for all routes
 
 app.Run();
